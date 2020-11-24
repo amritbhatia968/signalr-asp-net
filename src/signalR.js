@@ -2562,13 +2562,13 @@ const jQueryShim = require('./jQueryShim');
                             }
 
                             // We never want to pass a raiseReconnect flag after a successful poll.  This is handled via the error function
-                            if (delay > 0) {
-                                privateData.pollTimeoutId = window.setTimeout(function () {
-                                    poll(instance, shouldReconnect);
-                                }, delay);
-                            } else {
+                            // if (delay > 0) {
+                            //     privateData.pollTimeoutId = window.setTimeout(function () {
+                            //         poll(instance, shouldReconnect);
+                            //     }, delay);
+                            // } else {
                                 poll(instance, shouldReconnect);
-                            }
+                            // }
                         },
 
                         error: function (data, textStatus) {
